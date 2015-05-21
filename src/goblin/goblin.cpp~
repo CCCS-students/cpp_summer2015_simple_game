@@ -12,7 +12,7 @@ void Goblin::set_size(double sizeIn)
 {
 	size = sizeIn;
 }
-std::string Goblin::get_size()
+int Goblin::get_size()
 {
 	return sizeIn;
 }
