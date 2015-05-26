@@ -7,13 +7,11 @@
 class Goblin
 {	
 public:
-	Goblin(int);
+	Goblin(int, int, bool);
 	~Goblin();
     int move(int)
 
-
 private:
-
     int health;
     int current_room;
     bool friend; 
