@@ -1,42 +1,47 @@
 #include "goblin.h"
 #include <string>
-Goblin::Goblin(double sizeIn, string colorIn, string weaponIn, string statusIn)
+
+Goblin::Goblin(double sizeIn, std::string colorIn, std::string weaponIn, std::string statusIn)
+    : size(sizeIn), color(colorIn), weapon(weaponIn), status(statusIn)
 {
-	size = sizeIn;
-	color = colorIn;
-	weapon = weaponIn;
-	status = statusIn;
 }
 
 void Goblin::set_size(double sizeIn)
 {
 	size = sizeIn;
 }
-std::string Goblin::get_size()
+
+int Goblin::get_size()
 {
-	return sizeIn;
+	return size;
 }
-void Goblin::set_color(string colorIn)
+
+void Goblin::set_color(std::string colorIn)
 {
 	color = colorIn;
 }
-int Goblin::get_color()
+
+std::string Goblin::get_color()
 {
 	return color;
 }
-void Goblin::set_weapon(string weaponIn)
+
+void Goblin::set_weapon(std::string weaponIn)
 {
 	weapon = weaponIn;
 }
-int Goblin::get_weapon()
+
+std::string Goblin::get_weapon()
 {
 	return weapon;
 }
-void Goblin::set_status(string statusIn)
+
+void Goblin::set_status(std::string statusIn)
 {
 	status = statusIn;
 }
-int Goblin::get_status()
+
+std::string Goblin::get_status()
 {
 	return status;
 }
