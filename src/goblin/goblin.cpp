@@ -10,27 +10,27 @@ Goblin::Goblin(int health_, int current_room_,
 Goblin::~Goblin()
 {}
 
-int Goblin::move(int direction)
+int Goblin::move(int directionX, int directionY)
 {
-    if direction == 0
+    if (direction == 0)
     {
-        if current_room < 19
+        if (current_room < 19)
         {
             current_room += 5;
         }
     }
-    else if direction == 1
+    else (if direction == 1)
     {
-        if current_room > 4 
+        if (current_room > 4) 
         {
             current_room -= 5;
         }
     }
-    else if direction == 2
+    else if (direction == 2)
     {
         current_room += 1;
     }
-    else if direction == 3
+    else if (direction == 3)
     {
         current_room -= 1;
     }

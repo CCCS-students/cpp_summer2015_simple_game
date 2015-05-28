@@ -9,12 +9,12 @@ class Goblin
 public:
 	Goblin(int, int, bool);
 	~Goblin();
-    int move(int)
+    int move(int);
 
 private:
     int health;
-    int current_room;
-    bool friend; 
+    int location;
+    bool Friend; 
 };
 
 #endif
