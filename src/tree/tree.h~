@@ -10,6 +10,6 @@ public:
 
 private:
     std::string color;
-    int resourceNum;
+    int resourcNum;
     
 };
