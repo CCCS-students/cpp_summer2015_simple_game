@@ -4,7 +4,7 @@
 class Cow
 {
 public:
-    Cow(int intial_health=100, bool init_peaceful=true, int init_room=1);
+    Cow(int init_health=100, bool init_peaceful=true, int init_room=1);
     ~Cow();
     int move(int direction=-1);
 private:
