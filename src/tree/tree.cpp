@@ -1,20 +1,24 @@
-#include <iostream>
-#include <cstring>
-#include <ctime>
 #include <cstdlib>
+#include <ctime>
+
+#include "Tree.h"
 
 Tree::Tree(std::string input, int resourceNum)
+    : color(input), resourceNum(rand() % 15 + 10)
 {
-    color = input;
-    resourcNum = rand()%15 + 10;
 }
 
 int Tree::getResourceNum()
 {
-    return resourcNum;
+    return resourceNum;
 }
 
-string Tree::getColor()
+std::string Tree::getColor()
 {
     return color;
+}
+
+void setColor(std::string colorIn)
+{
+    color = colorIn;
 }
