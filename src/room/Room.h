@@ -4,17 +4,17 @@
 #include <cstdlib>
 #include <vector>
 
-#include <Tree.h>
-#include <Goblin.h>
-#include <Chest.h>
-#include <Cow.h>
+#include "Tree.h"
+#include "Goblin.h"
+#include "Chest.h"
+#include "Cow.h"
 
 class Room
 {
 public:
 	Room();
     // Constructor
-    Room(int width = 64, int height = 64, int x = 0, int y = 0, vector<Goblin*> startGobs, vector<Tree*> startTrees, vector<Cow*> startCows, vector<Chest*> startChests);
+    Room(int width = 64, int height = 64, int x = 0, int y = 0, std::vector<Goblin*> startGobs, std::vector<Tree*> startTrees, std::vector<Cow*> startCows, std::vector<Chest*> startChests);
     ~Room();
 
     // Getters and setters:
@@ -28,23 +28,23 @@ public:
     int getRPosY();
 
     // Containers to store objects (tree, goblin, chest, etc.)
-    vector<Goblin*> getGoblins();
-    vector<Tree*> getTrees();
-    vector<Chest*> getChests();
-    vector<Cow*> getCows();
+    std::vector<Goblin*> getGoblins();
+    std::vector<Tree*> getTrees();
+    std::vector<Chest*> getChests();
+    std::vector<Cow*> getCows();
 
-    void setGoblins(vector<Goblin*> input);
-    void setTrees(vector<Tree*> input);
-    void setChests(vector<Chest*> input);
-    void setCows(vector<Cow*> input);
+    void setGoblins(std::vector<Goblin*> input);
+    void setTrees(std::vector<Tree*> input);
+    void setChests(std::vector<Chest*> input);
+    void setCows(std::vector<Cow*> input);
     
-    // Functions to add to the vectors
+    // Functions to add to the std::vectors
     void addGoblin(Goblin* input);
     void addTree(Tree* input);
     void addChest(Chest* input);
     void addCow(Cow* input);
 
-    // Functions to remove to the vectors
+    // Functions to remove to the std::vectors
     void removeGoblin(int index);
     void removeTree(int index);
     void removeChest(int index);
@@ -62,10 +62,10 @@ private:
     int rPosX;
     int rPosY;
     // Containers to store objects (tree, goblin, chest, etc.)
-    vector<Goblin*> goblins;
-    vector<Tree*> trees;
-    vector<Chest*> chests;
-    vector<Cow*> cows;
+    std::vector<Goblin*> goblins;
+    std::vector<Tree*> trees;
+    std::vector<Chest*> chests;
+    std::vector<Cow*> cows;
     // Texture filepath or texture object
 };
 
