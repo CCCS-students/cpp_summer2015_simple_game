@@ -52,6 +52,12 @@ public:
 
     // Check if there's stuff in the room
     bool roomHasContents();
+	// Calculators for numbers of various contents in the room
+	int numTotalContents();
+	int numGoblins();
+	int numTrees();
+	int numChests();
+	int numCows();
     
     
 private:

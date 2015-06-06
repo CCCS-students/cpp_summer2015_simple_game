@@ -130,3 +130,28 @@ bool Room::roomHasContents()
 	else
 		return false;
 }
+
+int Room::numTotalContents()
+{
+	return numGoblins() + numTrees() + numChests() + numCows();
+}
+
+int Room::numGoblins()
+{
+	return goblins.size();
+}
+
+int Room::numTrees()
+{
+	return trees.size();
+}
+
+int Room::numChests()
+{
+	return chests.size();
+}
+
+int Room::numCows()
+{
+	return cows.size();
+}

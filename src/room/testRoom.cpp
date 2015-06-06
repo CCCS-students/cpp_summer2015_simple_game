@@ -41,10 +41,13 @@ int main()
 	std::cout << "Position: (" << room.getRPosX() << "," << room.getRPosY() << ")\n";
 	if(room.roomHasContents())
 	{
-		std::cout << "Room contents:\n";
+		std::cin.get();
+		std::cout << "\nRoom contents:\n";
 		dispRoomContents(room);
 		
-		std::cout << "\nAdding\n\tSmeagol\n\tPhoebus\n\tPandora's Box\n\tMinotaur\n\t\tto Goblins, Trees, Boxes, Cows...\n Done!\n";
+		std::cin.get();
+		std::cout << "\nAdding\n\tSmeagol\n\tPhoebus\n\tPandora's Box\n\tMinotaur\nto Goblins, Trees, Boxes, Cows...\n\nDone!\n";
+		std::cin.get();
 
 		Goblin* gob = new Goblin;
 		gob->name = "Smeagol";
@@ -65,19 +68,21 @@ int main()
 		
 		std::cout << "\nRoom contents:\n";
 		dispRoomContents(room);
+		std::cin.get();
 
 		std::cout << "\nRemoving original contents\n";
 		room.removeGoblin(1);
 		room.removeChest(1);
 		room.removeTree(1);
 		room.removeCow(1);
+		std::cin.get();
 
 		std::cout << "\nRoom contents: \n";
 		dispRoomContents(room);
 	}
 	else
 	{
-		std::cout << "Room is empty\n";
+		std::cout << "\nRoom is empty\n";
 	}
 	
 	std::cout << "\n";
@@ -91,20 +96,27 @@ void dispRoomContents(Room room)
 	std::vector<Chest*> rmChests = room.getChests();
 	std::vector<Cow*> rmCows = room.getCows();
 	
-	for(int i = 0; i < rmTrees.size() && rmTrees.at(i) != NULL; i ++)
+	for(int i = 0; i < room.numTrees() && rmTrees.at(i) != NULL; i ++)
 	{
 		std::cout << rmTrees.at(i)->name << " : Tree\n";
 	}
-	for(int i = 0; i < rmGobs.size() && rmGobs.at(i) != NULL; i ++)
+	for(int i = 0; i < room.numGoblins() && rmGobs.at(i) != NULL; i ++)
 	{
 		std::cout << rmGobs.at(i)->name << " : Goblin\n";
 	}
-	for(int i = 0; i < rmChests.size() && rmChests.at(i) != NULL; i ++)
+	for(int i = 0; i < room.numChests() && rmChests.at(i) != NULL; i ++)
 	{
 		std::cout << rmChests.at(i)->name << " : Chest\n";
 	}
-	for(int i = 0; i < rmCows.size() && rmCows.at(i) != NULL; i ++)
+	for(int i = 0; i < room.numCows() && rmCows.at(i) != NULL; i ++)
 	{
 		std::cout << rmCows.at(i)->name << " : Cow\n";
 	}
+
+	std::cout << "\nTotal Trees: " << room.numTrees();
+	std::cout << "\nTotal Goblins: " << room.numGoblins();
+	std::cout << "\nTotal Cows: " << room.numCows();
+	std::cout << "\nTotal Chests: " << room.numChests();
+	std::cout << "\n\tTotal: " << room.numTotalContents();
+	std::cout << "\n";
 }
