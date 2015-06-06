@@ -30,17 +30,21 @@ int main()
 	trees.push_back(treePtr);
 	goblins.push_back(goblinPtr);
 	chests.push_back(chestPtr);
-	//cows.push_back(cowPtr);
+	cows.push_back(cowPtr);
 	
 	Room room(64, 64, 0, 0, goblins, trees, cows, chests);
 	
-	std::cout << "Room details: \n";
+	std::cout << "\nRoom details: \n";
 	std::cout << "Size: " << room.getRHeight() << " by " << room.getRWidth() << std::endl;
-	std::cout << "Position: (" << room.getRPosX() << " , " << room.getRPosY() << ")\n";
+	std::cout << "Position: (" << room.getRPosX() << "," << room.getRPosY() << ")\n";
 	if(room.roomHasContents())
 	{
+		std::cout << "Room is not empty\n";
 	}
 	else
 	{
+		std::cout << "Room is empty\n";
 	}
+	
+	std::cout << "\n";
 }
