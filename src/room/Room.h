@@ -14,7 +14,7 @@ class Room
 public:
 	Room();
     // Constructor
-    Room(int width = 64, int height = 64, int x = 0, int y = 0, std::vector<Goblin*> startGobs, std::vector<Tree*> startTrees, std::vector<Cow*> startCows, std::vector<Chest*> startChests);
+    Room(int width, int height, int x, int y, std::vector<Goblin*> startGobs, std::vector<Tree*> startTrees, std::vector<Cow*> startCows, std::vector<Chest*> startChests);
     ~Room();
 
     // Getters and setters:

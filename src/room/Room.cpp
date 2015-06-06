@@ -8,7 +8,7 @@ Room::Room()
 	rPosY = 0;
 }
 
-Room::Room(int width = 64, int height = 64, int x = 0, int y = 0, vector<Goblin*> startGobs, vector<Tree*> startTrees, vector<Cow*> startCows, vector<Chest*> startChests) : rWidth(width), rHeight(height), rPosX(x), rPosY(y), goblins(startGobs), trees(startTrees), cows(startCows), chests(startChests)
+Room::Room(int width, int height, int x, int y, std::vector<Goblin*> startGobs, std::vector<Tree*> startTrees, std::vector<Cow*> startCows, std::vector<Chest*> startChests) : rWidth(width), rHeight(height), rPosX(x), rPosY(y), goblins(startGobs), trees(startTrees), cows(startCows), chests(startChests)
 {
 	
 }
@@ -42,47 +42,47 @@ int Room::getRPosY()
 	return rPosY;
 }
 
-vector<Goblin*> Room::getGoblins()
+std::vector<Goblin*> Room::getGoblins()
 {
 	return goblins;
 }
 
-vector<Tree*> Room::getTrees()
+std::vector<Tree*> Room::getTrees()
 {
 	return trees;
 }
 
-vector<Chest*> Room::getChests()
+std::vector<Chest*> Room::getChests()
 {
 	return chests;
 }
 
-vector<Cow*> Room::getCows()
+std::vector<Cow*> Room::getCows()
 {
 	return cows;
 }
 
-void Room::setGoblins(vector<Goblin*> input)
+void Room::setGoblins(std::vector<Goblin*> input)
 {
 	goblins = input;
 }
 
-void Room::setTrees(vector<Tree*> input)
+void Room::setTrees(std::vector<Tree*> input)
 {
 	trees = input;
 }
 
-void Room::setChests(vector<Chest*> input)
+void Room::setChests(std::vector<Chest*> input)
 {
 	chests = input;
 }
 
-void Room::setCows(vector<Cow*> input)
+void Room::setCows(std::vector<Cow*> input)
 {
 	cows = input;
 }
 
-void Room:addGoblin(Goblin* input)
+void Room::addGoblin(Goblin* input)
 {
 	goblins.push_back(input);
 }
@@ -125,7 +125,7 @@ void Room::removeCow(int index)
 bool Room::roomHasContents()
 {
 	// Check the vectors
-	if(!goblins.empty() || !chests.empty() || !trees.empty() || !cows.chests())
+	if(!goblins.empty() || !chests.empty() || !trees.empty() || !cows.empty())
 		return true;
 	else
 		return false;
