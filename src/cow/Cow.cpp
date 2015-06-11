@@ -3,8 +3,8 @@
 // Default constructor: sets cow attributes to default values, except for filepath
 Cow::Cow(std::string filePath)
 {
-	posX = 0;
-	posY = 0;
+	x = 0;
+	y = 0;
 	name = "Cow";
 	picFilePath = filePath;
 }
