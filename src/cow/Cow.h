@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include "SDL2/include/SDL.h"
 
 
 class Cow
