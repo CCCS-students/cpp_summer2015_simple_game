@@ -7,7 +7,7 @@
 #include "Tree.h"
 #include "Goblin.h"
 #include "Chest.h"
-#include "Cow.h"
+#include "../cow/Cow.h"
 
 class Room
 {
