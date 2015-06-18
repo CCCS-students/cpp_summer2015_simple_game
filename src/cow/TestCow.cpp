@@ -5,7 +5,7 @@
 #define WIDTH 640
 #define HEIGHT 640
 
-int main()
+int main( /*int argc, char* args[]*/ )
 {
 	// Create and initialize SDL window
 	SDL_Window* window = NULL;
@@ -16,6 +16,16 @@ int main()
 	if(SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
 		std::cout << "SDL could not initialize! SDL_Error: " << SDL_GetError() << "\n";
+	}
+	else
+	{
+		// Create window
+		window = SDL_CreateWindow("Cow Test", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, HEIGHT, WIDTH, SDL_WINDOW_SHOWN);
+		// Check window
+		if(window == NULL)
+		{
+			std::cout << "Window could not be created! SDL_Error: " << SDL_GetError() << "\n";
+		}
 	}
 	// Create a cow
 	Cow aCow(0, 0, "Cow/pics/cow.bmp", "Hamburger");

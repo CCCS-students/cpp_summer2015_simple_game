@@ -10,9 +10,9 @@ class Cow
 {
 	public:
 	// Default/minimalist constructor
-	Cow(std::string);
+	Cow(std::string, SDL_Window*);
 	// Copy constructor
-	Cow(int, int, std::string, std::string);
+	Cow(int, int, std::string, std::string, SDL_Window*);
 	~Cow();
 	
 	// Cow's position accessors
@@ -27,8 +27,9 @@ class Cow
 	void setName(std::string);
 	
 	// Cow's texture filepath accessor and mutator
-	std::string getPicFilePath();
-	void setPicFilePath(std::string);
+	SDL_Texture* getTexture();
+	void setTexture(SDL_Texture*);
+	void loadNewTexture(std::string, SDL_Window*);
 	
 	// Move function
 	void move(int, int);
@@ -37,8 +38,8 @@ class Cow
 	void moo(unsigned int);
 
 	private:
-	// Filepath for the cow texture
-	std::string picFilePath;
+	// Cow's texture
+	SDL_Texture* texture;
 	// A name for the cow
 	std::string name;
 	// Coordinates of the cow's position
