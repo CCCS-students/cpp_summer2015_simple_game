@@ -8,6 +8,10 @@ class Goblin
 	Goblin();
 	~Goblin();
 	
+	std::string getName();
+	void setName(std::string);	
+
+	private:
 	std::string name;
 };
 #endif

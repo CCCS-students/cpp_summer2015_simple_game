@@ -8,3 +8,14 @@ Chest::Chest()
 Chest::~Chest()
 {
 }
+
+std::string Chest::getName()
+{
+	return name;
+}
+
+void Chest::setName(std::string input)
+{
+	name = input;
+}
+	

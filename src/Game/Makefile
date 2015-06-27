@@ -9,4 +9,6 @@ LDIR=lib
 OBJ=*.cpp
 
 gameTest: gameTest.cpp
-	$(CC) gameTest.cpp $(LDIR)/$(OBJ) $(CFLAGS) $(TARGET) 
+	$(CC) gameTest.cpp $(LDIR)/$(OBJ) $(CFLAGS) $(TARGET)
+game: game.cpp
+	$(CC) game.cpp $(LDIR)/$(OBJ) $(CFLAGS) $(TARGET)

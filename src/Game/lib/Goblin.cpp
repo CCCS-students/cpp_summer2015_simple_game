@@ -8,3 +8,13 @@ Goblin::Goblin()
 Goblin::~Goblin()
 {
 }
+
+std::string Goblin::getName()
+{
+	return name;
+}
+
+void Goblin::setName(std::string input)
+{
+	name = input;
+}

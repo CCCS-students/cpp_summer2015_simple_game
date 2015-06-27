@@ -58,6 +58,9 @@ public:
 	int numTrees();
 	int numChests();
 	int numCows();
+	
+	// List everything in the room by name
+	void listContents();
     
     
 private:

@@ -172,3 +172,44 @@ int Room::numCows()
 {
 	return cows.size();
 }
+
+// List all contents of room by name
+void Room::listContents()
+{
+	std::cout << "Room contents: \n";
+	if(numGoblins() > 0)
+	{
+		std::cout << "Goblins: " << numGoblins() << "\n";
+		for(int i = 0, j = getGoblins().size(); i < j && getGoblins().at(i) != NULL; i ++)
+		{
+			std::cout << "\t" << i + 1 << ") " << getGoblins().at(i)->getName() << "\n";
+		}
+	}
+
+	if(numTrees() > 0)
+	{
+		std::cout << "\nTrees: " << numTrees() << "\n";
+		for(int i = 0, j = getTrees().size(); i < j && getTrees().at(i) != NULL; i ++)
+		{
+			std::cout << "\t" << i + 1 << ") " << getTrees().at(i)->getName() << "\n";
+		}
+	}
+	
+	if(numChests() > 0)
+	{
+		std::cout << "\nChests: " << numChests() << "\n";
+		for(int i = 0, j = getChests().size(); i < j && getChests().at(i) != NULL; i ++)
+		{
+			std::cout << "\t" << i + 1 << ") " << getChests().at(i)->getName() << "\n";
+		}
+	}	
+	
+	if(numCows() > 0)
+	{
+		std::cout << "\nCows: " << numCows() << "\n";
+		for(int i = 0, j = getCows().size(); i < j && getCows().at(i) != NULL; i ++)
+		{
+			std::cout << "\t" <<  i + 1 << ") " << getCows().at(i)->getName() << "\n";
+		}
+	}
+}
